@@ -30,11 +30,11 @@ type
     cb*: proc(menu: ptr tray_menu) {.cdecl.}
     context*: pointer
 
-    submenu*: ptr tray_menu
+    submenu*: ptr UncheckedArray[tray_menu]
 
   tray* {.bycopy.} = object
     icon*: cstring
-    menu*: ptr tray_menu
+    menu*: ptr UncheckedArray[tray_menu]
 
 {.push cdecl.}
 proc tray_update*(tray: ptr tray) {.importc: "tray_update".}
