@@ -2,7 +2,6 @@
 ##
 ## Author: Trayambak Rai (xtrayambak at disroot dot org)
 import tray/lowlevel
-import pretty
 
 type
   TrayInitializationError* = object of Defect
